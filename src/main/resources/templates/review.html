@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Review</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/re.css}" href="../static/css/re.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+</head>
+
+<body onclick="
+	console.log('work')
+	for(let i = 1; i < 6; i++) {
+	    if(document.getElementById('audio' + i) == null) continue;
+		document.getElementById('audio' + i).pause()
+		document.getElementById('audio' + i).currentTime = 0
+		document.getElementById('button' + i).children[0].src = 'images/play.png'
+	}
+">
+<nav th:insert="sample :: header">
+
+</nav>
+<h1>Search</h1>
+<div class="search-box">
+    <input type="text" class="search-txt" placeholder="Search">
+    <a href="#" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></a>
+</div>
+<h1 class="need">Review</h1>
+<hr>
+<h1>In trend</h1>
+<div class="musics">
+    <th:block th:each="melodia: ${melodias}">
+        <div class="music">
+            <img th:src="'images/' + ${melodia.preview} + '.jpg'" class="preview" alt=":(">
+            <div class="control">
+                <div class="brightness"></div>
+                <button th:id="'button' + ${melodia.id}"
+                th:onclick="'javascript:playMusic(' + ${melodia.id} + ')'">
+                    <img src="images/play.png" alt=":("></button>
+                <form class="add" th:action="@{'/music/add/' + ${melodia.id}}" method="post">
+                    <button type="submit"><img src="images/plus.png"></button>
+                </form>
+            </div>
+            <audio th:id="'audio' + ${melodia.id}" style="display: none;">
+                <source th:src="'music/' + ${melodia.audio} + '.mp3'">
+            </audio>
+        </div>
+    </th:block>
+
+</div>
+<h1>New releases</h1>
+<h1>Извиняемся, но пока не загружены песни</h1>
+
+<h1>Kazakh vibe</h1>
+<h1>Извиняемся, но пока не загружены песни</h1>
+
+<h1>Mood</h1>
+<h1>Извиняемся, но пока не загружены песни</h1>
+
+<footer th:insert="sample :: footer" class="footer">
+
+
+    <div class="footer_logo">One Click</div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" th:href="@{/script.js}" src="../static/script.js"></script>
+<script>
+		function playMusic(id) {
+			if(!document.getElementById('audio' + id).paused &&
+					document.getElementById('audio' + id).duration > 0) {
+						setTimeout(function() {
+						document.getElementById('audio' + id).pause()
+						document.getElementById('button' + id).children[0].src = 'images/play.png';
+						}, 200)
+					}
+					else {
+						setTimeout(function() {
+						document.getElementById('audio' + id).play()
+						document.getElementById('button' + id).children[0].src = 'images/pause.png';
+						}, 200)
+					}
+		}
+
+</script>
+</body>
+
+</html>

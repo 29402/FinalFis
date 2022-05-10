@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Chords</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/chords.html}" href="../static/css/chords.css">
+</head>
+<body>
+<nav th:insert="sample :: header">
+      </nav>
+      <h2>Click on the instrument you need and find all the chords of the songs you need!</h2>
+ 
+      <img  class="guitar" src="https://avatars.mds.yandex.net/get-images-cbir/2267406/ofz4hDQH1CHwZtOfasLt0w4319/ocr" width="200" height="250">
+      <h3 class="gui"><a href="https://akkordam.ru/razbory/popular">Guitar</a></h3>
+     <img  class="piano" src="https://avatars.mds.yandex.net/get-images-cbir/1382435/27AsK6skZk5CDYaE-APHEQ4750/ocr" width="200" height="250">
+      <h3 class="Piano"><a href="https://music-education.ru/prostye-akkordy-dlya-pianino/">Piano</a></h3>
+      <img class="ukulele" src="https://avatars.mds.yandex.net/get-images-cbir/2357640/7u9PHeYuHkx2BGFnNPB4Tw4882/ocr" width="200" height="248">
+      <h3 class="Ukulele"><a href="https://ukula.ru/singer/">Ukulele</a></h3>
+     <img class="dombyra" src="https://avatars.mds.yandex.net/get-images-cbir/1446386/ex3o1MWXonW4-6UshIL96g4969/ocr" width="200" height="250">
+      <h3 class="Dombyra"><a href="https://vk.com/kazdombyra">Dombyra</a></h3>
+    <img class="brb" src="brb.jpeg" width="200px" height="250px">
+    <h3 class="BRB"><a href="https://ru.wikihow.com/%D1%87%D0%B8%D1%82%D0%B0%D1%82%D1%8C-%D0%BD%D0%BE%D1%82%D1%8B-%D0%B4%D0%BB%D1%8F-%D0%B1%D0%B0%D1%80%D0%B0%D0%B1%D0%B0%D0%BD%D0%BE%D0%B2">Drum</a></h3>
+    <div class="video-1">
+    <iframe width="200" height="250" src="https://www.youtube.com/embed/1VkWK3PAaLM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="video-2">
+    <iframe width="200" height="250" src="https://www.youtube.com/embed/QnxkGuzIzxM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="video-3">
+    <iframe width="200" height="250" src="https://www.youtube.com/embed/8syRbdFLR_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="video-4">
+    <iframe width="200" height="250" src="https://www.youtube.com/embed/-gBMiUd5IiI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="video-5">
+    <iframe width="200" height="250" src="https://www.youtube.com/embed/-AVDXs58J3I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+
+      <footer class="footer" th:insert="sample :: footer">
+    <div class="footer_logo">One Click</div>
+  </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

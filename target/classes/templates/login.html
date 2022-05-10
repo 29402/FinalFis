@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Review</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/re.css}" href="../static/css/re.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+</head>
+
+<body onclick="
+	console.log('work')
+	for(let i = 0; i < 20; i++) {
+		document.getElementById('audio' + i).pause()
+		document.getElementById('audio' + i).currentTime = 0
+		document.getElementById('button' + (i + 1)).children[0].src = 'images/play.png'
+	}
+">
+<nav th:insert="sample :: header">
+
+</nav>
+
+<form method="post" class="log-form">
+    <h1>Login</h1>
+    <input required name="email" type="email" placeholder="Email"/>
+    <input required name="password" type="password" placeholder="Password"/>
+    <button type="submit">Login</button>
+    <a th:href="@{/register}">Register</a>
+</form>
+<footer th:insert="sample :: footer" class="footer"></footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" th:href="@{/script.js}" src="../static/script.js"></script>
+</body>
+
+</html>

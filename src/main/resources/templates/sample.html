@@ -1,0 +1,16 @@
+<ul th:fragment="header">
+    <a href="/">Main Menu</a>
+    <a href="/about">About Us</a>
+    <a href="/review">Review</a>
+    <a href="/myplay">My Playlist </a>
+    <a href="/chords">Chords</a>
+    <a sec:authorize="hasAuthority('admin')" href="/admin">Admin</a>
+    <a sec:authorize="isAuthenticated()" href="/logout-account">Logout</a>
+    <a sec:authorize="!isAuthenticated()" href="/login">Sign-in</a>
+</ul>
+
+<ul th:fragment="footer">
+    <li><a href="#"><img src="images/whatsapp.png"></a></li>
+    <li><a href="#"><img src="images/telegram-logo.png"></a></li>
+    <li><a href="#"> <img src="images/instagram-logo.png"></a></li>
+</ul>

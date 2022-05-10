@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>About Us</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style1.css}" href="../static/css/style1.css" >
+</head>
+<body>
+	<nav th:insert="sample :: header">
+      </nav>
+<div class="about_all"> 
+         <div class="about_section">
+         <div class="inner_container">
+<h1>About Us</h1>
+<p>Top quality for you</p>
+<p>Onr Click is constantly releasing new songs.Music+label "One Click" collaborates with the most talanted artists from everywhere, assisting them in the process of recording and realising music. Here you can find information about the latest releases of albums and singles on our label. If you have questions or comments, please contact us.</p>
+</div>
+</div>
+</div>
+<footer class="footer" th:insert="sample :: footer">
+    <div class="footer_logo">One Click</div>
+  </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

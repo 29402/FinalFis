@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>One Click</title>
+  <link rel="stylesheet" type="text/css" th:href="@{css/style.css}" href="../static/css/style.css">
+</head>
+<body>
+      <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__item">
+                  <div class="one"><h1>One Click</h1>
+                    <p>With love, your developers(Amina and Kuralai)</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </header>
+      <nav th:insert="sample :: header" class="header__links">
+      </nav>
+ <div class="photo">
+  <div class="Text">
+    <h1>One Click</h1>
+    <p>The future of music is here!</p>
+    <p>This site was created in order to be able to listen to music with love!</p>    
+  </div>
+</div>
+ <div class="contact_background">
+        <div class="contact_wrap">
+       <div class="contact_in" id="contact_in">
+         <h1>Contact info</h1>
+         <h2> <i class="fa fa-phone" aria-hidden="true"></i>Phone</h2>
+         <p>+(777)-225-53-55</p>
+         <h2>Email</h2>
+         <p><i class="fa fa-envelope" aria-hidden="true"></i>  29402@iitu.edu.kz</p>
+          <h2>Address</h2>
+         <p><i class="fa fa-map-marker" aria-hidden="true"></i> улица Манаса 8</p>
+         
+        
+
+      </div>
+      
+       <div class="contact_in">
+      <h1>Send a Message</h1>
+         <form method="post" th:action="@{/mess}" th:object="${message}">
+           
+             <input required type="text" placeholder="Full Name" class="contact_in_input" name="name">
+           
+            <input type="text" required placeholder="Email" class="contact_in_input" name="email">
+         
+            <input type="text" required placeholder=" Phone Number" class="contact_in_input" name="phone">
+           
+           <input type="text" placeholder="Message" required class="contact_in_textarea" name="value"> </input>
+           
+           <input type="submit" value="submit" class="contact_in_button">
+
+         </form>
+      </div>
+       <div class="contact_in">
+      <iframe src="https://yandex.kz/map-widget/v1/-/CCUQRNGpPA" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+      </div>
+    
+        
+</div>
+    
+     
+    </section>
+    <footer th:insert="sample :: footer" class="footer">
+    <div class="footer_logo">One Click</div>
+  </footer>
+
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
+</body>
+</html>
